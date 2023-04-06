@@ -23,6 +23,8 @@ class MainActivity : AppCompatActivity() {
         newButton.setOnClickListener{
             numberOfPages++
             viewPager.adapter?.notifyItemInserted(numberOfPages - 1)// ViewPager can be "?"/No
+
+            viewPager.setCurrentItem(numberOfPages-1, true)
         }
 
         supportFragmentManager.findFragmentByTag("f")
