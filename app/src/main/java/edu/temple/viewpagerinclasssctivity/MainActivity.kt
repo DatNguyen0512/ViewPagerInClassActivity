@@ -25,6 +25,8 @@ class MainActivity : AppCompatActivity() {
             viewPager.adapter?.notifyItemInserted(numberOfPages - 1)// ViewPager can be "?"/No
         }
 
+        supportFragmentManager.findFragmentByTag("f")
+
 
         viewPager.adapter = object: FragmentStateAdapter(this){
             override fun getItemCount() = numberOfPages
